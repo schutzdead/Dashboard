@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-family: Roboto, sans-serif;
+    user-select: none;
+} 
+
+.container{
+    display: grid;
+    grid-template-columns:1fr 8fr 1fr;
+}
+
+.container>div{
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+
+.rightside, .center{
+    background-color: #f0f1f3;
+}
+
+span{
+    color:#40bc66;
+    word-spacing: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* -------------------------------LEFT /RIGHT--------------------------------- */
+
+.leftside, .rightside{
+    background-color: #041737;
+}
+
+/* -------------------------------CENTER--------------------------------- */
+
+.center{
+    display: grid;
+    grid-template:1fr repeat(2,3fr) 6fr / repeat(6, 1fr);
+    gap: 15px;
+    padding:15px;
+}
+
+.center>div:nth-child(n+3){
+    background-color: white;
+    border-radius: 15px;
+}
+
+.titleCenter{
+    grid-column: 1/6;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 45px;
+    font-weight: 600;
+    background-color: #f0f1f3;
+}
+
+.notification{
+    grid-column: 6/7;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30px;
+    background-color: #f0f1f3;
+}
+
+.image{
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dfebf6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.picture1{
+    height: 23px;
+    width:auto;
+}
+
+
+.title{
+    grid-row: 1/3;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.number{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.evol{
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.number, .evol{
+    grid-column: 1/3;
+}
+
+.trendUp{
+    height: 18px;
+    position: relative;
+    top:3.5px
+}
+
+.CA{
+    grid-area: 2/1/3/3;
+}
+
+.client{
+    grid-area: 2/3/3/5;
+}
+
+.ventes{
+    grid-area: 2/5/3/7;
+}
+
+.CA, .client, .ventes{
+    grid-template:repeat(4,1fr)/3fr 1fr;
+    display: grid;
+    padding: 20px;
+}
+
+.trendCA{
+    grid-area:3/1/4/4;
+}
+
+.trendVente{
+    grid-area: 3/4/4/7;
+}
+
+.trendCA, .trendVente{
+    display: grid;
+    padding: 20px;
+    grid-template: 1fr 1.5fr 5fr / 1fr 5fr;
+}
+
+.trend{
+    grid-area: 1/2/4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.evol1{
+    grid-row: 2/3;
+    align-self: flex-end;
+}
+
+.picture2{
+    width: 250px;
+    padding-top: 20px;
+}
+
+.title1{
+font-size: 15px;
+font-weight: 600;
+grid-area: 1/1/2/3;
+z-index: 2;
+}
+
+.document{
+    grid-area: 4/1/5/7;
+    display: grid;
+    grid-template-rows:1fr repeat(4,1fr);
+    padding: 20px;
+}
+
+.document div:first-child{
+    margin-bottom: 15px;
+}
+
+.title3{
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+}
+
+.subtitle{
+    font-size: 12px;
+    color: grey;
+    word-spacing: 0px;
+    font-weight: 100;
+}
+
+.document div:nth-child(n+2){
+    display: grid;
+    grid-template-columns: repeat(5,5fr);
+    column-gap: 8%;
+}
+
+.document>div{
+    padding-left: 20px;
+}
+
+.span1, .span2, .span3,.span4{
+    color: black;
+    padding-top: 5px;
+    word-spacing: 0px;
+    font-weight: 100;
+}
+
+.rowTitle>span{
+    font-weight: 600;
+}
+
+.rowTitle>span:last-child{
+    color: #a6a8a9;
+    background-color: white;
+    font-size: 14px;
+}
+
+.report>span:last-child{
+    color: #ed8548;
+    background-color: #fdd5c8;
+}
+
+.document>div:nth-child(n+2)>.spanEnd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spanEnd{
+    background-color :#d3ebdb;
+    color:#4cb56e;
+    border-radius: 15px;
+    width: 60px;
+    height: 30px;
+    word-spacing: 0px;
+    font-size: 11px;
+}
+
